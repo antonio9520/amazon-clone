@@ -20,7 +20,12 @@ import {
 } from 'react-native';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
-import {HomeScreen, ProductScreen} from './src/screens';
+import {
+  HomeScreen,
+  ProductScreen,
+  ShoopingCartScreen,
+  AddressScreen,
+} from './src/screens';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -33,7 +38,9 @@ const App = () => {
     <SafeAreaView style={backgroundStyle}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
       {/* <HomeScreen /> */}
-      <ProductScreen />
+      {/* <ProductScreen /> */}
+      {/* <ShoopingCartScreen /> */}
+      <AddressScreen />
     </SafeAreaView>
   );
 };
