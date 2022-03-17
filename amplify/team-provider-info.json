@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-amazonclone-dev-14444-authRole",
+      "UnauthRoleArn": "arn:aws:iam::386137563798:role/amplify-amazonclone-dev-14444-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::386137563798:role/amplify-amazonclone-dev-14444-authRole",
+      "Region": "sa-east-1",
+      "DeploymentBucketName": "amplify-amazonclone-dev-14444-deployment",
+      "UnauthRoleName": "amplify-amazonclone-dev-14444-unauthRole",
+      "StackName": "amplify-amazonclone-dev-14444",
+      "StackId": "arn:aws:cloudformation:sa-east-1:386137563798:stack/amplify-amazonclone-dev-14444/f9d81a50-a5ac-11ec-b4ae-0a7950a43b76",
+      "AmplifyAppId": "d34mqw4qt1jxuq"
+    },
+    "categories": {
+      "auth": {
+        "amazonclone40187d1d": {}
+      }
+    }
+  }
+}

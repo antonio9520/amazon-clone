@@ -8,29 +8,18 @@
  * @format
  */
 import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-  LogBox,
-} from 'react-native';
-
+import {SafeAreaView, StatusBar, useColorScheme, LogBox} from 'react-native';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
-import {
-  HomeScreen,
-  ProductScreen,
-  ShoopingCartScreen,
-  AddressScreen,
-} from './src/screens';
 import Router from './src/router';
+import {Amplify} from 'aws-amplify';
+import awsconfig from './src/aws-exports';
+import {withAuthenticator} from 'aws-amplify-react-native';
 
 LogBox.ignoreLogs([
   "[react-native-gesture-handler] Seems like you're using an old API with gesture components, check out new Gestures system!",
 ]);
+
+Amplify.configure(awsconfig);
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -52,4 +41,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default withAuthenticator(App);
