@@ -7,7 +7,6 @@
  *
  * @format
  */
-
 import React from 'react';
 import {
   SafeAreaView,
@@ -17,6 +16,7 @@ import {
   Text,
   useColorScheme,
   View,
+  LogBox,
 } from 'react-native';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
@@ -26,12 +26,18 @@ import {
   ShoopingCartScreen,
   AddressScreen,
 } from './src/screens';
+import Router from './src/router';
+
+LogBox.ignoreLogs([
+  "[react-native-gesture-handler] Seems like you're using an old API with gesture components, check out new Gestures system!",
+]);
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    flex: 1,
   };
 
   return (
@@ -40,7 +46,8 @@ const App = () => {
       {/* <HomeScreen /> */}
       {/* <ProductScreen /> */}
       {/* <ShoopingCartScreen /> */}
-      <AddressScreen />
+      {/* <AddressScreen /> */}
+      <Router />
     </SafeAreaView>
   );
 };

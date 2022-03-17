@@ -4,7 +4,9 @@ import {styles} from './styles';
 import {ProductItem} from '../../components';
 import products from '../../data/products';
 
-const HomeScreen = () => {
+const HomeScreen = ({searchValue}: {searchValue: string}) => {
+  console.log(searchValue);
+
   return (
     <View style={styles.page}>
       <FlatList

@@ -15,4 +15,7 @@ export const styles = StyleSheet.create({
     borderColor: 'lightgrey',
     borderRadius: 2,
   },
+  errorLabel: {
+    color: 'red',
+  },
 });
